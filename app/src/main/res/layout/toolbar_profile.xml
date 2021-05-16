@@ -19,7 +19,7 @@
         android:fontFamily="@font/montserrat_regular"
         android:textFontWeight="600"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:layout_marginLeft="160dp"/>
 
 </androidx.appcompat.widget.Toolbar>

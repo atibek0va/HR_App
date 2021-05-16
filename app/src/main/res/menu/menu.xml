@@ -4,7 +4,7 @@
     <item
         android:id="@+id/course"
         android:title=""
-        android:icon="@drawable/course"/>
+        android:icon="@drawable/home"/>
 
     <item
         android:id="@+id/finance"
@@ -14,7 +14,7 @@
     <item
         android:id="@+id/med"
         android:title=""
-        android:icon="@drawable/med"/>
+        android:icon="@drawable/course"/>
 
     <item
         android:id="@+id/psych"

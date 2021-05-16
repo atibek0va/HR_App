@@ -20,19 +20,42 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="243dp"
-            android:layout_marginRight="243dp"
+            android:layout_marginTop="33dp"
             android:alpha="0.5"
             android:fontFamily="@font/montserrat_regular"
-            android:text="hi,Janny Arthur 👋🏼"
+            android:text="hi,"
             android:textColor="@color/black"
             android:textFontWeight="600"
             android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="34dp"
+            android:layout_toEndOf="@+id/username"
+            android:layout_toRightOf="@+id/username"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Janny Arthur"
+            android:textFontWeight="600"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/kol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_toEndOf="@+id/userName"
+            android:layout_toRightOf="@+id/userName"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="👋🏼"
+            android:textFontWeight="600" />
 
         <TextView
             android:id="@+id/howau"
@@ -159,17 +182,31 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/sucVoted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll2"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            android:textFontWeight="700"
+            android:gravity="center_horizontal"
+            android:text="you’ve successfully voted ✅"
+            android:textAlignment="center" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ll2"
+            android:layout_below="@id/sucVoted"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginStart="47dp"
             android:layout_marginLeft="47dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="46dp"
             android:layout_marginRight="46dp"
             android:background="@drawable/bg">
@@ -206,7 +243,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/news_img"/>
-
 
         </LinearLayout>
 

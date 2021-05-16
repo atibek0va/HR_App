@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HRApp">
+        <activity android:name=".activities.AllCoursesActivity"></activity>
+        <activity android:name=".activities.NewComplaintActivity" />
+        <activity android:name=".activities.NewQuestionActivity" />
+        <activity android:name=".activities.guest.JobDescriptionActivity" />
+        <activity android:name=".activities.guest.GuestMainPageActivity" />
+        <activity android:name=".activities.guest.WelcomeGuestActivity" />
         <activity android:name=".activities.financesupport.LaptopActivity" />
         <activity android:name=".activities.financesupport.TransportActivity" />
         <activity android:name=".activities.financesupport.RealstateActivity" />
@@ -19,7 +25,6 @@
         <activity android:name=".activities.BronActivity" />
         <activity android:name=".authenfication.Login" />
         <activity android:name=".activities.EditUserInfo" />
-        <activity android:name=".activities.UserInfo" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.MainPageActivity" />
         <activity android:name=".authenfication.Registration" />

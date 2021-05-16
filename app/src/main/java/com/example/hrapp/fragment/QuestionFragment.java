@@ -2,6 +2,7 @@ package com.example.hrapp.fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -25,30 +26,40 @@ public class QuestionFragment extends Fragment {
         // Inflate the layout for this fragment
         view =inflater.inflate(R.layout.fragment_question, container, false);
 
-//        tabLayout = view.findViewById(R.id.tabLayout);
-//        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
-//        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-//        viewPager = view.findViewById(R.id.viewPager);
-//        TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-//        viewPager.setAdapter (tabAdapter);
-//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab) {
-//                viewPager.setCurrentItem ( tab.getPosition ());
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab) {
-//
-//            }
-//        });
-
+        tabLayout = view.findViewById(R.id.tabLayout);
+        viewPager = view.findViewById(R.id.viewPager);
        return view;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        setUpViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    private void setUpViewPager(ViewPager viewPager) {
+        TabAdapter tabAdapter = new TabAdapter(getChildFragmentManager());
+        tabAdapter.addFragment(new WorkFragment(), "Work/company");
+        tabAdapter.addFragment(new ComplaintFragment(), "Complaint box");
+
+        viewPager.setAdapter(tabAdapter);
     }
 }

@@ -5,16 +5,26 @@ public class User {
     String email;
     String password;
     String hour;
-    String number;
+    String curatorship;
+    String addWorks;
+    String insta;
+    String tele;
+    String mail;
+    String phone;
 
     public User(){}
 
-    public User(String name, String email, String password, String hour, String number) {
+    public User(String name, String email, String password, String hour, String curatorship, String addWorks, String insta, String tele, String mail, String phone) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.hour = hour;
-        this.number = number;
+        this.curatorship = curatorship;
+        this.addWorks = addWorks;
+        this.insta = insta;
+        this.tele = tele;
+        this.mail = mail;
+        this.phone = phone;
     }
 
     public String getHour() {
@@ -25,12 +35,12 @@ public class User {
         this.hour = hour;
     }
 
-    public String getNumber() {
-        return number;
+    public String getCuratorship() {
+        return curatorship;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setCuratorship(String number) {
+        this.curatorship = curatorship;
     }
 
     public String getName() {
@@ -55,5 +65,45 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAddWorks() {
+        return addWorks;
+    }
+
+    public void setAddWorks(String addWorks) {
+        this.addWorks = addWorks;
+    }
+
+    public String getInsta() {
+        return insta;
+    }
+
+    public void setInsta(String insta) {
+        this.insta = insta;
+    }
+
+    public String getTele() {
+        return tele;
+    }
+
+    public void setTele(String tele) {
+        this.tele = tele;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

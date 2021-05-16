@@ -75,7 +75,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onSuccess(AuthResult authResult) {
 //                        Log.i("gogpo", "123 " + uemail + upassword);
-                    user = new User(uname, uemail, upassword, "0", "1");
+                    user = new User(uname, uemail, upassword, "0", "1", "2", "3", "4", "5", "6");
                     emailformat = user.getEmail().replace(".", "-");
                     myRef.child("users").child(emailformat).setValue(user);
                     Intent i = new Intent(getApplicationContext(), Login.class);

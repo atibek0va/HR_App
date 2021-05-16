@@ -1,33 +1,23 @@
 package com.example.hrapp.model;
 
 public class Doctor {
-    String key;
-    String photo;
+    int photo;
     String name;
     String exper;
     String number;
 
-    public Doctor(String key,String photo, String name, String exper, String number) {
-        this.key = key;
+    public Doctor(int photo, String name, String exper, String number) {
         this.photo = photo;
         this.name = name;
         this.exper = exper;
         this.number = number;
     }
 
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public String getPhoto(){
+    public int getPhoto(){
         return photo;
     }
 
-    public String setPhoto(String photo){
+    public int setPhoto(int photo){
         return photo;
     }
 

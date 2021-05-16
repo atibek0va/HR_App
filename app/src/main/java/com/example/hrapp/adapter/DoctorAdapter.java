@@ -16,7 +16,9 @@ import com.bumptech.glide.Glide;
 import com.example.hrapp.activities.BronActivity;
 import com.example.hrapp.R;
 import com.example.hrapp.model.Doctor;
+import com.example.hrapp.model.Job;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyTViewHolder>{
@@ -40,7 +42,7 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyTViewHol
             btnZapis = view.findViewById(R.id.btnZapis);
         }
     }
-    public DoctorAdapter(Context context, List<Doctor> doctorList) {
+    public DoctorAdapter(Context context, ArrayList<Doctor> doctorList) {
         this.context = context;
         this.doctorList = doctorList;
     }
@@ -58,10 +60,12 @@ public class DoctorAdapter extends RecyclerView.Adapter<DoctorAdapter.MyTViewHol
     public void onBindViewHolder(@NonNull MyTViewHolder holder, int position) {
         Doctor item = doctorList.get(position);
 
-        Glide.with ( context.getApplicationContext () )
-                .load ( item.getPhoto () )
-                .placeholder ( R.drawable.doctor )
-                .into ( holder.doctor_photo );
+//        Glide.with ( context.getApplicationContext () )
+//                .load ( item.getPhoto () )
+//                .placeholder ( R.drawable.doctor )
+//                .into ( holder.doctor_photo );
+
+        holder.doctor_photo.setImageResource(item.getPhoto());
         holder.name.setText(item.getName());
         holder.exper.setText(item.getExper());
         holder.number.setText(item.getNumber());

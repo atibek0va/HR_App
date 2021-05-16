@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.hrapp.R;
+import com.example.hrapp.fragment.CoursesFragment;
 import com.example.hrapp.fragment.FinanceFragment;
 import com.example.hrapp.fragment.HomeFragment;
 import com.example.hrapp.fragment.PsychFragment;
@@ -77,6 +78,9 @@ public class MainPageActivity extends AppCompatActivity {
                     break;
                 case R.id.finance:
                     selectedFragment = new FinanceFragment();
+                    break;
+                case R.id.med:
+                    selectedFragment = new CoursesFragment();
                     break;
                 case R.id.psych:
                     selectedFragment = new PsychFragment();
