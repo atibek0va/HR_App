@@ -79,22 +79,20 @@ public class JobsFragment extends Fragment {
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(jobAdapter);
 
-        recyclerView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), JobDescriptionActivity.class));
-            }
-        });
+//        recyclerView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getActivity(), JobDescriptionActivity.class));
+//            }
+//        });
 
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(getActivity(), recyclerView,
                         new RecyclerItemClickListener.OnItemClickListener() {
                             @Override
                             public void onItemClick(View view, final int pos) {
-                                if(pos==0){
                                     Intent intent = new Intent(getActivity(), JobDescriptionActivity.class);
                                     startActivity(intent);
-                                }
                             }
 
                             @Override

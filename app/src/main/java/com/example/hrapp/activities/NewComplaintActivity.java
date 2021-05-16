@@ -73,6 +73,7 @@ public class NewComplaintActivity extends AppCompatActivity implements View.OnCl
 
         btnSubmit.setOnClickListener(this);
         btnBack.setOnClickListener(this);
+        btnCancel.setOnClickListener(this);
 
         from_bottom = AnimationUtils.loadAnimation(this, R.anim.anim_from_bottom);
         from_top = AnimationUtils.loadAnimation(this, R.anim.anim_from_top);

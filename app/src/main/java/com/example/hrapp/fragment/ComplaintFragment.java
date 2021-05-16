@@ -87,13 +87,6 @@ public class ComplaintFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(complaintAdapter);
 
-//        recyclerView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getActivity(), JobDescriptionActivity.class));
-//            }
-//        });
-
         return view;
 
     }

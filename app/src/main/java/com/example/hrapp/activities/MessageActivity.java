@@ -83,5 +83,11 @@ public class MessageActivity extends AppCompatActivity {
                 startActivity(new Intent(MessageActivity.this, ProfileActivity.class));
             }
         });
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MessageActivity.this, RespondsActivity.class));
+            }
+        });
     }
 }
